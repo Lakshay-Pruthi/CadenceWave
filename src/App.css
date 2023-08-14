@@ -1,0 +1,14 @@
+:root {
+  --primary: #ee4e34;
+  --bgPrimary: #fcedda;
+  --bgSecondary: #ffefdb;
+  --fontPrimary: 'Quicksand', sans-serif;
+  --fontSecondary: 'Montez', sans-serif;
+
+}
+
+
+
+svg {
+  width: 400px !important
+}

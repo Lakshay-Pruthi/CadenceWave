@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+@import url('./CSS/Components/Navbar.css');
+@import url('./CSS/Components/Button.css');
+@import url('./CSS/Components/Footer.css');
+@import url('./CSS/Pages/Music.css');
+@import url('./CSS/Pages/Home.css');
+@import url('./CSS/Pages/Album.css');
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+.centerHeading {
+    text-align: center;
+
+}
+
+.subHeading {
+    text-align: center;
+    font-size: 60px;
+    color: var(--primary);
+    padding: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+
+    z-index: 100;
+}
+
+.subHeading svg {
+    width: 200px !important;
+    height: 200px !important;
+    z-index: -1;
+}
+
+.miniContainer {
+    display: flex !important;
+    height: 47% !important;
+}
+
+
+
+.itemContainer {
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    height: 85%;
+    overflow-x: scroll;
+}
+
+.scrollable::-webkit-scrollbar {
+    visibility: hidden;
+    width: 10px;
+}
+
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: rgba(106, 106, 106, 0.601);
+    border-radius: 15px;
+    visibility: hidden;
+    transition: 0.5 ease;
+}
+
+.sub-Container:hover>.scrollable::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.innerNav {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.innerNav div {
+    all: unset;
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center !important;
+}
+
+.searchbar input {
+    all: unset;
+    width: 300px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgba(255, 105, 36, 0.358);
+    color: white;
+    font-family: 'Quicksand';
+}
+
+input::placeholder {
+    color: white;
+}
+
+.searchbar img {
+    all: unset;
+    width: 25px;
+    height: 25px;
+    margin-left: -130px;
+}

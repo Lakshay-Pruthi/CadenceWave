@@ -1,0 +1,67 @@
+h1 {
+    font-family: 'Montez', cursive;
+    color: var(--primary);
+    font-size: 35px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: white;
+    border-bottom: 2px solid white;
+    z-index: 1;
+}
+
+
+
+#navList {
+    display: flex;
+    width: 40%;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--fontPrimary);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: 0.5s ease;
+    z-index: 1;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+
+
+nav div {
+    display: flex;
+    font-family: var(--fontPrimary);
+    width: 155px;
+    padding: 2px;
+    padding-left: 10px;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: var(--primary);
+    align-items: center;
+    color: white;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px dotted white;
+    margin-left: 5px;
+}
