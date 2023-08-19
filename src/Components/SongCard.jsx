@@ -1,10 +1,15 @@
-import play from '../assets/play.png'
 function SongCard(props) {
-    const { title } = props;
+    const { title, previewUrl } = props;
     return (
         <div className="songCard">
-            {title}
-            <img src={play} alt="" />
+            <p>● {title}</p>
+            <div>
+                {previewUrl ? "" : <p>Preview not available</p>}
+                <audio id="audioPlayer" controls>
+                    <source id="audioSource" src={previewUrl} type="audio/mpeg"></source>
+                </audio>
+            </div>
+
         </div>
     )
 }

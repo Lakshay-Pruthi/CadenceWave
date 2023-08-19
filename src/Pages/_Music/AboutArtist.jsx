@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { connect } from "react-redux";
-import { _fetchArtistData } from "./scripts/fetchArtistData";
 
+import { _fetchArtistData } from "../scripts/Music/fetchArtistData";
+import loadingAnimation2 from '../../assets/loadingAnimation2.json'
+import Lottie from 'lottie-react'
 function AboutArtist({ app_token }) {
     const { id } = useParams();
     const [Data, setData] = useState(null);
@@ -12,16 +14,21 @@ function AboutArtist({ app_token }) {
             setData(data);
         }
         fetchAtristData();
-    }, [id])
+    }, [id, app_token])
     return (
         <>
             <div className="sub-Container ">
                 <h1 className="centerHeading">Albums</h1>
+                {Data ?
+                    <div className="itemContainer scrollable">
 
-                <div className="itemContainer scrollable">
-
-                    {Data}
-                </div>
+                        {Data}
+                    </div>
+                    :
+                    <div className='loadingDiv'>
+                        <Lottie animationData={loadingAnimation2} />
+                    </div>
+                }
             </div>
         </>
     )

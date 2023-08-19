@@ -18,15 +18,21 @@
     margin: 10px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.songCard img {
-    width: 15px;
-    height: 15px;
+
+.songCard div {
+    display: flex;
 }
+
+.songCard p {
+    margin: auto 10px;
+}
+
+
 
 .songCard:hover {
     cursor: pointer;
     background-color: var(--bgPrimary);
-    transform: scale(1.005);
 }

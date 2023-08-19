@@ -65,7 +65,7 @@ body {
 
 
 .scrollable::-webkit-scrollbar-thumb {
-    background-color: rgba(106, 106, 106, 0.601);
+    background-color: var(--scrollbar);
     border-radius: 15px;
     visibility: hidden;
     transition: 0.5 ease;
@@ -114,4 +114,33 @@ input::placeholder {
     width: 25px;
     height: 25px;
     margin-left: -130px;
+}
+
+.loadingDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.inactive {
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    width: fit-content;
+    padding: 0px 10px;
+    color: white;
+    font-family: var(--fontPrimary);
+    border-radius: 25px;
+}
+
+.note a {
+    padding: 0px 10px;
+    border-radius: 25px;
+    background-color: white;
+    margin: 10px;
+    padding: 5px 10px;
 }

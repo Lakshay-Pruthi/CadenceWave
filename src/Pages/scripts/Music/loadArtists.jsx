@@ -1,4 +1,4 @@
-import artistIdData from "../../data/artists.json";
+import artistIdData from "../../../data/Music/artists.json";
 import { Link } from 'react-router-dom'
 
 

@@ -1,21 +1,20 @@
-import SongCard from "../../Components/SongCard";
+import SongCard from "../../../Components/SongCard";
 
-export async function _fetchAlbumSongs(token, id) {
-    const result = await fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
+export async function _fetchPodcastEpisodes(token, id) {
+    const result = await fetch(`https://api.spotify.com/v1/shows/${id}/episodes?market=IN`, {
         method: "GET",
         headers: {
             Authorization: "Bearer  " + token,
         },
     });
     const data = await result.json();
-    console.log(data);
     const Songs = data.items;
     const songs = [];
     for (let i = 0; i < Songs.length; i++) {
         const songName = await Songs[i].name;
-        const id = await Songs[i].id;
+        const previewUrl = await Songs[i].audio_preview_url;
         songs.push(
-            <SongCard key={i} title={songName} />
+            <SongCard key={i} title={songName} previewUrl={previewUrl} />
         );
     }
     return songs;

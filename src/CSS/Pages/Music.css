@@ -4,10 +4,17 @@
      border-bottom: 5px solid white;
      padding: 10px 50px;
      box-sizing: border-box;
-     overflow-x: scroll;
+     overflow-y: scroll;
  }
 
+ .sub-Container::-webkit-scrollbar {
+     width: 10px;
+ }
 
+ .sub-Container::-webkit-scrollbar-thumb {
+     background-color: var(--scrollbar);
+     border-radius: 10px;
+ }
 
 
  .songCardBanner {

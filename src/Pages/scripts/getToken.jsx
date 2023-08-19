@@ -1,7 +1,11 @@
-const clientId = "ba9aff8e7d04457798b7f52fd3552d8c";
-const clientSecret = "6783c55f7c1140dab23ac629479f42c3";
+
+
+
+const clientId = import.meta.env.VITE_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
 export const _getToken = async () => {
+
   const result = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {

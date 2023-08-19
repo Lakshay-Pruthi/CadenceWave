@@ -5,12 +5,12 @@ function Navbar() {
     return (
         <>
             <nav>
-                <Link to={'/home'}><h1>CadenceWave</h1></Link>
+                <Link to={'/CadenceWave/'}><h1>CadenceWave</h1></Link>
                 <ul id='navList'>
-                    <NavLink to={'Music'} >
+                    <NavLink to={'Music/:Artists'} >
                         <li>Music</li>
                     </NavLink>
-                    <NavLink to={'Podcast'} >
+                    <NavLink to={'Podcast/:Podcasters'} >
                         <li>Podcast</li>
                     </NavLink>
                     <NavLink to={'Comedy'} >
