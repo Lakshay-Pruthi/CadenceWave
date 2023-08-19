@@ -21,8 +21,8 @@ function Spritual() {
                 <h1>Coming Soon...</h1>
                 <div className='note'>
                     <p>To check functionality of the app. Please go to</p>
-                    <Link to={'/Music/:Artists'}>Music</Link>
-                    <Link to={'/Podcast/:Podcasters'}>Podcast</Link>
+                    <Link to={'/CadenceWave/Music/:Artists'}>Music</Link>
+                    <Link to={'/CadenceWave/Podcast/:Podcasters'}>Podcast</Link>
                 </div>
             </div>
         </>

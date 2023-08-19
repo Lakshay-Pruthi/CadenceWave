@@ -33,7 +33,7 @@ export async function loadPoadcastersData(token) {
         const id = await Shows[i].id;
         images.push(
             <div key={i} className="songCardBanner">
-                <Link to={`/Podcast/${name}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
+                <Link to={`/CadenceWave/Podcast/${name}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
             </div>
         );
     }

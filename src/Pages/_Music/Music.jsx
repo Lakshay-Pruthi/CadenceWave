@@ -49,8 +49,8 @@ function Music({ app_token }) {
                 <h1 className="subHeading"><Lottie animationData={speakerMusic} />Music<Lottie animationData={speakerMusic} /></h1>
                 <nav className='innerNav'>
                     <div>
-                        <NavLink to={'/Music/:Artists'}>Artists</NavLink>
-                        <NavLink to={'/Music/:Albums'}>Albums</NavLink>
+                        <NavLink to={'/CadenceWave/Music/:Artists'}>Artists</NavLink>
+                        <NavLink to={'/CadenceWave/Music/:Albums'}>Albums</NavLink>
                         <NavLink to={''} className={'inactive'}>Playlists</NavLink>
                         <NavLink to={''} className={'inactive'}>Songs</NavLink>
                     </div>

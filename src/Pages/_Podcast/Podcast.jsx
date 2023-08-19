@@ -33,7 +33,7 @@ function Podcast({ app_token }) {
                 <h1 className="subHeading"><Lottie animationData={micPodcast} />Podcast<Lottie animationData={micPodcast} /></h1>
                 <nav className='innerNav'>
                     <div>
-                        <NavLink to={'/Podcast/:Podcasters'} >Podcasters</NavLink>
+                        <NavLink to={'/CadenceWave/Podcast/:Podcasters'} >Podcasters</NavLink>
                         <NavLink to={''} className={'inactive'}>Audiobooks</NavLink>
                         <NavLink to={''} className={'inactive'}>Playlists</NavLink>
                         <NavLink to={''} className={'inactive'}>Motivational</NavLink>

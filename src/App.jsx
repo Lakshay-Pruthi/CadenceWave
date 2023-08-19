@@ -53,7 +53,7 @@ function App({ app_token }) {
 
             <Route path="Podcast" element={<Podcast />} />
             <Route path="Podcast/:type" element={<Podcast />} />
-            <Route path="/Podcast/:name/:id" element={<Episodes />} />
+            <Route path="Podcast/:name/:id" element={<Episodes />} />
 
 
             <Route path="Comedy" element={<Comedy />} />
