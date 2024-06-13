@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { connect } from 'react-redux'
 
 
-import './app.css'
+import './App.css'
 
 import Main from "./Pages/Main"
 import Home from "./Pages/Home"
