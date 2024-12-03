@@ -19,7 +19,7 @@ export async function _fetchArtistData(token, id) {
         const id = await Albums[i].id;
         images.push(
             <div key={i} className="songCardBanner">
-                <Link to={`/CadenceWave/album/${fullName}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
+                <Link to={`/CadenceWave/Music/album/${fullName}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
             </div>
         );
     }

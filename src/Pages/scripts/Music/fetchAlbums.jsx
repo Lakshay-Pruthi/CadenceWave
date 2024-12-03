@@ -33,7 +33,7 @@ export async function loadAlbumsData(token) {
         const id = await Albums[i].id;
         images.push(
             <div key={i} className="songCardBanner">
-                <Link to={`/CadenceWave/album/${name}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
+                <Link to={`/CadenceWave/Music/album/${name}/${id}`}> <img src={imgUrl} /><p>{name}</p> </Link>
             </div>
         );
     }

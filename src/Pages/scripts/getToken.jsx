@@ -25,7 +25,6 @@ export const _getToken = async () => {
       return response.json();
     })
     .then(data => {
-      console.log(data.access_token);
 
       token = data.access_token;
     })

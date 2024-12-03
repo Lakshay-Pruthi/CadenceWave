@@ -7,10 +7,15 @@ function Navbar() {
             <nav>
                 <Link to={'/CadenceWave/'}><h1>CadenceWave</h1></Link>
                 <ul id='navList'>
-                    <NavLink to={'Music/:Artists'} >
+                    <NavLink to={'Music/:Artists'} className={({ isActive }) =>
+                        isActive || location.pathname.includes("/Music") ? "active" : ""
+                    }
+                    >
                         <li>Music</li>
                     </NavLink>
-                    <NavLink to={'Podcast/:Podcasters'} >
+                    <NavLink to={'Podcast/:Podcasters'} className={({ isActive }) =>
+                        isActive || location.pathname.includes("/Podcast") ? "active" : ""
+                    } >
                         <li>Podcast</li>
                     </NavLink>
                     <NavLink to={'Comedy'} >

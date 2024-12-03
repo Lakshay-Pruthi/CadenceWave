@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useEffect } from "react"
 import { connect } from 'react-redux'
+import { Outlet } from "react-router-dom"
+
 
 
 import './App.css'
@@ -45,15 +47,20 @@ function App({ app_token }) {
             <Route index element={<Home />} />
 
 
-            <Route path="Music" element={<Music />} />
-            <Route path="Music/:type" element={<Music />} />
-            <Route path="about/artist/:id" element={<AboutArtist />} />
-            <Route path="album/:name/:id" element={<Album />} />
+            <Route path="Music" element={<Outlet />}>
+              <Route index element={<Music />} />
+              <Route path=":type" element={<Music />} />
+              <Route path="about/artist/:id" element={<AboutArtist />} />
+              <Route path="album/:name/:id" element={<Album />} />
+            </Route>
 
 
-            <Route path="Podcast" element={<Podcast />} />
-            <Route path="Podcast/:type" element={<Podcast />} />
-            <Route path="Podcast/:name/:id" element={<Episodes />} />
+            <Route path="Podcast" element={<Outlet />}>
+              <Route index element={<Podcast />} />
+              <Route path=":type" element={<Podcast />} />
+              <Route path=":name/:id" element={<Episodes />} />
+            </Route>
+
 
 
             <Route path="Comedy" element={<Comedy />} />
