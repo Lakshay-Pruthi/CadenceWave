@@ -1,21 +1,38 @@
 
-
-
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
+const encodedCredentials = btoa(`${clientId}:${clientSecret}`);
+
+
+
 export const _getToken = async () => {
+  let token = null;
 
-  const result = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
+  const result = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: "Basic " + btoa(clientId + ":" + clientSecret),
+      'Authorization': `Basic ${encodedCredentials}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: "grant_type=client_credentials",
-  });
+    body: new URLSearchParams({ grant_type: 'client_credentials' })
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-  const data = await result.json();
-  const TOKEN = data.access_token;
-  return TOKEN;
+      return response.json();
+    })
+    .then(data => {
+      console.log(data.access_token);
+
+      token = data.access_token;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+  return token;
+
 };

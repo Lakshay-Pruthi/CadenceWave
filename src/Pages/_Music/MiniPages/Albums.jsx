@@ -11,6 +11,12 @@ function Albums(props) {
         <>
             {data ?
                 <>
+                    <h1>New Releases</h1>
+
+                    <div className='miniContainer itemContainer  scrollable'>
+                        {newReleases}
+                    </div>
+
                     <h1>Top Albums</h1>
 
                     <div className='miniContainer itemContainer  scrollable'>
@@ -18,12 +24,6 @@ function Albums(props) {
                             <Lottie animationData={mainBanner4} />
                         </div>
                         {data}
-                    </div>
-                    <h1>New Releases</h1>
-
-                    <div className='miniContainer itemContainer  scrollable'>
-
-                        {newReleases}
                     </div>
 
                 </>

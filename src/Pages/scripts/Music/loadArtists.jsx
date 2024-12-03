@@ -25,6 +25,8 @@ async function fetchProfile(token) {
 
 export async function loadArtistsData(token) {
   let Artists = await fetchProfile(token);
+  console.log(Artists);
+
   Artists = Artists.artists;
   const images = [];
   for (let i = 0; i < Artists.length; i++) {

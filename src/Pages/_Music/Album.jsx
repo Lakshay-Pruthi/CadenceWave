@@ -12,6 +12,7 @@ function Album({ app_token }) {
         async function fetchAtristData() {
             const data = await _fetchAlbumSongs(app_token.token, id);
             setData(data);
+
         }
         fetchAtristData();
     }, [id, app_token])

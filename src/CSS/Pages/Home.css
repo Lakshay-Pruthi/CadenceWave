@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 77vh;
+    height: 73vh;
     background-color: var(--bgSecondary);
     border-bottom: 5px solid white;
 

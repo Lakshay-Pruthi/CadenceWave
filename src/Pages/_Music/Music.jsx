@@ -22,12 +22,14 @@ function Music({ app_token }) {
     useEffect(() => {
         async function displayArtists() {
             const token = app_token.token;
+            console.log("token :", token);
+
             let Data;
             let OtherData;
 
             if (type == ":Artists") {
                 Data = await loadArtistsData(token);
-                OtherData = await loadRecommendedArtistsData(token)
+                // OtherData = await loadRecommendedArtistsData(token)
             } else if (type == ':Albums') {
                 Data = await loadAlbumsData(token);
                 OtherData = await loadNewAlbumReleases(token);

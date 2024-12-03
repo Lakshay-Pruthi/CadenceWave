@@ -19,10 +19,10 @@ function Artists(props) {
                         </div>
                         {data}
                     </div>
-                    <h1>Recommended Artists</h1>
+                    {/* <h1>Recommended Artists</h1>
                     <div className='miniContainer itemContainer  scrollable'>
                         {recommendedData}
-                    </div>
+                    </div> */}
                 </>
 
                 :
